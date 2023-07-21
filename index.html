@@ -60,12 +60,16 @@
     }
 
     .location {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       max-width: 960px;
       margin: 0 auto;
       padding-top: 20px;
     }
 
     .location-item {
+      max-width: 640px;
       margin: 10px auto;
       padding: 10px;
       border: 1px solid #d4af37; /* Dark golden border */
@@ -123,7 +127,13 @@
       color: #666;
     }
 
-    /* Your existing media queries */
+    /* Responsive styles */
+    @media (min-width: 768px) {
+      .location-item {
+        margin: 10px; /* Add some spacing between location items */
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -154,31 +164,27 @@
   </style>
 
   <!-- Google Maps locations -->
-  <div id="locations" class="location">
-    <div class="location-item">
-      <p><strong>Lokacije</strong></p>
-      </div class>
 
-      <div class="location-item">
+    <div id="locations" class="location">
+    <div class="location-item">
       <p><strong>Okupljanje kod mlade</strong></p>
       <p>Fruškogorska 18, Retfala, Osijek</p>
       <!-- Embedded Google Map for "Okupljanje kod mlade" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.646300941937!2d18.65831471535599!3d45.549313879103374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e7d1f0bc4ad2d%3A0x2d3a06bb5cc3cf61!2sFru%C5%A1kogorska%2018%2C%2031000%2C%20Osijek!5e0!3m2!1sen!2shr!4v1657800948146!5m2!1sen!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div class>
+    </div>
 
-      <div class="location-item">
+    <div class="location-item">
       <p><strong>Crkva Uzvišenja Svetog Križa, Retfala, Osijek</strong></p>
       <p>Žumberačka ulica 53, Osijek</p>
       <!-- Embedded Google Map for "Crkva Uzvišenja Svetog Križa, Retfala" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.373269960069!2d18.697657115356144!3d45.55977887910366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e7f15d4a3311d%3A0x400f12274ac37b0!2s%C5%BDumbera%C4%8Dka%20ul.%2053%2C%2031000%2C%20Osijek!5e0!3m2!1sen!2shr!4v1657801376405!5m2!1sen!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div class>
+    </div>
 
-      <div class="location-item">
+    <div class="location-item">
       <p><strong>Zoo Hotel Osijek</strong></p>
       <p>Sjevernodravska obala 1, Tvrđavica, Osijek</p>
       <!-- Embedded Google Map for "Zoo Hotel Osijek" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.297175631821!2d18.670109215356255!3d45.56601627910401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475e7db6c191d0f3%3A0x601456a1c8a79c7a!2sZoo%20Hotel%20Osijek!5e0!3m2!1sen!2shr!4v1657801575859!5m2!1sen!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-      </div class>
     </div>
   </div>
 
