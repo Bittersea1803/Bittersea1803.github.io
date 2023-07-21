@@ -7,13 +7,13 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #f9f7f5;
-      color: #333;
+      background-color: #fdf6e3; /* Light golden background */
+      color: #b58900; /* Golden text color */
       text-align: center;
       padding: 20px;
       margin: 0;
       opacity: 0; /* Start with the page hidden */
-      animation: fadeIn 1s ease forwards; /* Fade in animation */
+      animation: fadeIn 2s ease forwards; /* Fade in animation */
     }
 
     @keyframes fadeIn {
@@ -25,10 +25,10 @@
     .invitation-image {
       max-width: 100%;
       height: auto;
-      border: 5px solid #d2416c;
+      border: 5px solid #d4af37; /* Dark golden border */
       border-radius: 10px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin: 30px auto;
+      margin: 15px auto;
       opacity: 0; /* Start with the image hidden */
       animation: slideIn 1s ease forwards, fadeInImage 2s ease 1s forwards; /* Slide in and fade in animation */
     }
@@ -48,7 +48,7 @@
     .google-form {
       width: 100%;
       max-width: 640px;
-      margin: 0 auto;
+      margin: 40px auto; /* Increased distance from Google Maps section */
       opacity: 0; /* Start with the form hidden */
       animation: fadeInForm 1s ease 2s forwards; /* Fade in animation with delay */
     }
@@ -72,11 +72,23 @@
       max-width: 300px;
       margin: 0 10px;
       padding: 10px;
-      border: 1px solid #ccc;
+      border: 1px solid #d4af37; /* Dark golden border */
       border-radius: 10px;
+      background-color: #fff8e1; /* Pale golden background for locations */
     }
 
-    /* Navigation index styles */
+    /* Styling for the top part */
+    .top-part {
+      padding: 20px;
+      border: 2px solid #d4af37; /* Dark golden border */
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: #fff8e1; /* Pale golden background for top part */
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Styling for the Navigation Index */
     .navigation-index {
       display: flex;
       justify-content: center;
@@ -86,49 +98,54 @@
     .navigation-link {
       margin: 0 10px;
       text-decoration: none;
-      color: #d2416c;
+      color: #d4af37; /* Dark golden link color */
       font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom-color 0.3s ease;
     }
 
-    /* Responsive styles */
-    @media only screen and (max-width: 768px) {
-      .invitation-image {
-        margin: 20px auto;
-      }
-
-      .google-form {
-        max-width: 100%;
-        padding: 0 10px; /* Add some padding to form on smaller screens */
-      }
+    .navigation-link:hover {
+      border-bottom-color: #d4af37; /* Dark golden link color on hover */
     }
 
-    @media only screen and (max-width: 480px) {
-      .invitation-image {
-        margin: 10px auto;
-      }
-
-      .location {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .location-item {
-        margin: 10px 0;
-      }
+    /* Additional styles */
+    .invitation-note {
+      margin-top: 20px;
+      font-size: 18px; /* Increased font size for better visibility */
+      font-weight: bold; /* Added bold font weight */
     }
+
+    .invitation-note a {
+      text-decoration: underline; /* Added underline for better visibility */
+    }
+
+    .made-with-love {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    /* Your existing media queries */
   </style>
 </head>
 <body>
-  <!-- Navigation Index -->
-  <div class="navigation-index">
-    <a class="navigation-link" href="#invitation">Pozivnica</a>
-    <a class="navigation-link" href="#locations">Lokacije</a>
-    <a class="navigation-link" href="#form">Upitnik</a>
+  <!-- Top Part with Navigation Index -->
+  <div class="top-part">
+    <h1>Tena i Marijan - 7.10.2023., Osijek</h1>
+    <!-- Navigation Index -->
+    <div class="navigation-index">
+      <a class="navigation-link" href="#invitation">Pozivnica</a>
+      <a class="navigation-link" href="#locations">Lokacije</a>
+      <a class="navigation-link" href="#form">Upitnik</a>
+    </div>
   </div>
 
   <!-- Invitation image with cute transition -->
   <div id="invitation" style="animation: coolFadeIn 1s ease 0.5s forwards;">
     <img class="invitation-image" src="pozivnica.png" alt="Pozivnica za vjenčanje">
+    <p class="invitation-note">Molimo vas da ispunite <a href="#form" class="google-maps-link">upitnik</a> na dnu.</p>
   </div>
 
   <!-- Animation for Invitation image -->
@@ -167,5 +184,13 @@
     <!-- Embedded Google form -->
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6EMwdIIung2AVY_TdLyOf0ZuXUy8Ag_L-s0Au650NrMbnLQ/viewform?embedded=true" width="100%" height="1338" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
+
+  <!-- Anchor links for smooth scrolling -->
+  <a class="anchor-link" id="invitation"></a>
+  <a class="anchor-link" id="locations"></a>
+  <a class="anchor-link" id="form"></a>
+
+  <!-- Made with love by Marijan -->
+  <div class="made-with-love">Made with ❤️ by Marijan, 2023.</div>
 </body>
 </html>
