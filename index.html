@@ -46,8 +46,8 @@
     }
 
     .google-form {
-      max-width: 640px;
       width: 100%;
+      max-width: 640px;
       margin: 0 auto;
       opacity: 0; /* Start with the form hidden */
       animation: fadeInForm 1s ease 2s forwards; /* Fade in animation with delay */
@@ -64,6 +64,15 @@
       .invitation-image {
         margin: 20px auto;
       }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .google-form {
+        max-width: 100%;
+        padding: 0 10px; /* Add some padding to form on smaller screens */
+      }
     }
 
     @media only screen and (max-width: 480px) {
@@ -73,10 +82,6 @@
 
       h1 {
         font-size: 24px;
-      }
-
-      .google-form {
-        max-width: 100%;
       }
     }
   </style>
@@ -99,7 +104,7 @@
 
   <div class="google-form">
     <!-- Embedded Google form -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6EMwdIIung2AVY_TdLyOf0ZuXUy8Ag_L-s0Au650NrMbnLQ/viewform?embedded=true" width="640" height="1338" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6EMwdIIung2AVY_TdLyOf0ZuXUy8Ag_L-s0Au650NrMbnLQ/viewform?embedded=true" width="100%" height="1338" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
   </div>
 </body>
 </html>
