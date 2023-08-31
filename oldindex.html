@@ -12,55 +12,51 @@
       text-align: center;
       padding: 20px;
       margin: 0;
-      opacity: 1; /* Start with the page shown */
+      opacity: 0; /* Start with the page hidden */
+      animation: fadeIn 3s ease forwards; /* Fade in animation */
     }
 
-    .top-part {
-      padding: 20px;
-      border: 2px solid #d4af37;
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .invitation-image {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid #d4af37; /* Dark golden border */
       border-radius: 10px;
-      margin: 20px auto;
-      max-width: 800px;
-      background-color: white;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      font-family: 'Times New Roman', Times, serif;
+      margin: 15px auto;
+      opacity: 0; /* Start with the image hidden */
+      animation: slideIn 1s ease forwards, fadeInImage 2s ease 1s forwards; /* Slide in and fade in animation */
     }
 
-    .navigation-index {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
+    @keyframes slideIn {
+      to {
+        transform: translateY(-20px);
+      }
     }
 
-    .navigation-link {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #d4af37;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom-color 0.3s ease;
+    @keyframes fadeInImage {
+      to {
+        opacity: 1;
+      }
     }
 
-    .navigation-link:hover {
-      border-bottom-color: #d4af37;
+    .google-form {
+      width: 100%;
+      max-width: 640px;
+      margin: 40px auto; /* Increased distance from Google Maps section */
+      opacity: 0; /* Start with the form hidden */
+      animation: fadeInForm 1s ease 2s forwards; /* Fade in animation with delay */
     }
 
-    .invitation-note {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .invitation-note a {
-      text-decoration: underline;
-    }
-
-    .made-with-love {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
+    @keyframes fadeInForm {
+      to {
+        opacity: 1;
+      }
     }
 
     .location {
@@ -76,19 +72,23 @@
       max-width: 640px;
       margin: 10px auto;
       padding: 10px;
-      border: 1px solid #d4af37;
+      border: 1px solid #d4af37; /* Dark golden border */
       border-radius: 10px;
-      background-color: white;
+      background-color: white; /* Pale golden background for locations */
     }
 
-    /* Styling for the Invitation image */
-    .invitation-image {
-      max-width: 100%;
-      height: auto;
-      border: 5px solid #d4af37;
+
+    
+    /* Styling for the top part */
+    .top-part {
+      padding: 20px;
+      border: 2px solid #d4af37; /* Dark golden border */
       border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: white; /* Pale golden background for top part */
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin: 15px auto;
+      font-family: 'Times New Roman', Times, serif;
     }
 
     /* Styling for the Navigation Index */
@@ -101,7 +101,7 @@
     .navigation-link {
       margin: 0 10px;
       text-decoration: none;
-      color: #d4af37;
+      color: #d4af37; /* Dark golden link color */
       font-weight: bold;
       text-transform: uppercase;
       padding-bottom: 2px;
@@ -110,18 +110,18 @@
     }
 
     .navigation-link:hover {
-      border-bottom-color: #d4af37;
+      border-bottom-color: #d4af37; /* Dark golden link color on hover */
     }
 
     /* Additional styles */
     .invitation-note {
       margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 18px; /* Increased font size for better visibility */
+      font-weight: bold; /* Added bold font weight */
     }
 
     .invitation-note a {
-      text-decoration: underline;
+      text-decoration: underline; /* Added underline for better visibility */
     }
 
     .made-with-love {
@@ -133,25 +133,31 @@
     /* Responsive styles */
     @media (min-width: 768px) {
       .location-item {
-        margin: 10px;
+        margin: 10px; /* Add some spacing between location items */
       }
     }
 
   </style>
 </head>
 <body>
+  <!-- Top Part with Navigation Index -->
   <div class="top-part">
     <h1>Tena i Marijan - 7.10.2023., Osijek</h1>
+    <!-- Navigation Index -->
     <div class="navigation-index">
       <a class="navigation-link" href="#invitation">Pozivnica</a>
       <a class="navigation-link" href="#locations">Lokacije</a>
+      <a class="navigation-link" href="#form">Upitnik</a>
     </div>
   </div>
 
+  <!-- Invitation image with cute transition -->
   <div id="invitation" style="animation: coolFadeIn 1s ease 0.5s forwards;">
     <img class="invitation-image" src="pozivnica.png" alt="Pozivnica za vjenčanje">
+    <p class="invitation-note">Molimo vas da ispunite <a href="#form" class="google-maps-link">upitnik</a> na dnu.</p>
   </div>
 
+  <!-- Animation for Invitation image -->
   <style>
     @keyframes coolFadeIn {
       to {
@@ -160,26 +166,43 @@
     }
   </style>
 
-  <div id="locations" class="location">
+  <!-- Google Maps locations -->
+
+    <div id="locations" class="location">
     <div class="location-item">
-      <p><strong>14:00 Okupljanje kod mlade</strong></p>
+      <p><strong>Okupljanje kod mlade</strong></p>
       <p>Fruškogorska 18, Retfala, Osijek</p>
+      <!-- Embedded Google Map for "Okupljanje kod mlade" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.510184240593!2d18.6468804!3d45.560178099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7220a2f54a7%3A0x768b0bbf465af9ce!2sFru%C5%A1kogorska%20ul.%2018%2C%2031000%2C%20Osijek!5e0!3m2!1shr!2shr!4v1689981923803!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="location-item">
-      <p><strong>17:30 Crkva Uzvišenja Svetog Križa</strong></p>
+      <p><strong>Crkva Uzvišenja Svetog Križa</strong></p>
       <p>Žumberačka ulica 53, Retfala, Osijek</p>
+      <!-- Embedded Google Map for "Crkva Uzvišenja Svetog Križa, Retfala" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11173.744687784778!2d18.6486111!3d45.5616667!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7187cef97c5%3A0x4d4301f77c29c3ff!2s%C5%BDupa%20Uzvi%C5%A1enja%20Svetog%20Kri%C5%BEa%2C%20Osijek%206%2C%20Retfala!5e0!3m2!1shr!2shr!4v1689980964202!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
     <div class="location-item">
-      <p><strong>19:30 Zoo Hotel Osijek</strong></p>
+      <p><strong>Zoo Hotel Osijek</strong></p>
       <p>Sjevernodravska obala 1, Tvrđavica, Osijek</p>
+      <!-- Embedded Google Map for "Zoo Hotel Osijek" -->
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.0867072977085!2d18.664970175250694!3d45.56869492646203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7b77405829b%3A0x9bfc53bc35b1612b!2sHotel%20Zoo!5e0!3m2!1shr!2shr!4v1689981045305!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </div>
 
+  <!-- RSVP Google Form -->
+  <div id="form" class="google-form">
+    <!-- Embedded Google form -->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6EMwdIIung2AVY_TdLyOf0ZuXUy8Ag_L-s0Au650NrMbnLQ/viewform?embedded=true" width="100%" height="1338" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  <!-- Anchor links for smooth scrolling -->
+  <a class="anchor-link" id="invitation"></a>
+  <a class="anchor-link" id="locations"></a>
+  <a class="anchor-link" id="form"></a>
+
+  <!-- Made with love by Marijan -->
   <div class="made-with-love">Made with ❤️ by Marijan, 2023.</div>
 </body>
 </html>
