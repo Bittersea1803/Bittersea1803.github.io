@@ -1,0 +1,45 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff0f5; /* Light pink background */
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    color: #d63384; /* Romantic pink */
+}
+
+.love-note, .song {
+    margin-top: 20px;
+}
+
+blockquote {
+    font-style: italic;
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-left: 5px solid #d63384;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+.wedding-photo img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto; /* Center the photo */
+    border-radius: 10px; /* Optional: adds rounded corners to your photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+}
