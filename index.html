@@ -1,185 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tena i Marijan - pozivnica</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #fdf6e3; /* Light golden background */
-      color: #b58900; /* Golden text color */
-      text-align: center;
-      padding: 20px;
-      margin: 0;
-      opacity: 1; /* Start with the page shown */
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ljubavna Bilješka za Tenu</title>
+<link rel="stylesheet" href="style.css">
+<script>
+    function validateLogin() {
+        var nameInput = document.getElementById("nameInput").value;
+        if(nameInput === "Tena Miletić") {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        } else {
+            alert("Molimo unesite točno ime za pristup.");
+        }
     }
-
-    .top-part {
-      padding: 20px;
-      border: 2px solid #d4af37;
-      border-radius: 10px;
-      margin: 20px auto;
-      max-width: 800px;
-      background-color: white;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      font-family: 'Times New Roman', Times, serif;
-    }
-
-    .navigation-index {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .navigation-link {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #d4af37;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom-color 0.3s ease;
-    }
-
-    .navigation-link:hover {
-      border-bottom-color: #d4af37;
-    }
-
-    .invitation-note {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .invitation-note a {
-      text-decoration: underline;
-    }
-
-    .made-with-love {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    .location {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      max-width: 960px;
-      margin: 0 auto;
-      padding-top: 20px;
-    }
-
-    .location-item {
-      max-width: 640px;
-      margin: 10px auto;
-      padding: 10px;
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      background-color: white;
-    }
-
-    /* Styling for the Invitation image */
-    .invitation-image {
-      max-width: 100%;
-      height: auto;
-      border: 5px solid #d4af37;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-      margin: 15px auto;
-    }
-
-    /* Styling for the Navigation Index */
-    .navigation-index {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-
-    .navigation-link {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #d4af37;
-      font-weight: bold;
-      text-transform: uppercase;
-      padding-bottom: 2px;
-      border-bottom: 2px solid transparent;
-      transition: border-bottom-color 0.3s ease;
-    }
-
-    .navigation-link:hover {
-      border-bottom-color: #d4af37;
-    }
-
-    /* Additional styles */
-    .invitation-note {
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .invitation-note a {
-      text-decoration: underline;
-    }
-
-    .made-with-love {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    /* Responsive styles */
-    @media (min-width: 768px) {
-      .location-item {
-        margin: 10px;
-      }
-    }
-
-  </style>
+</script>
 </head>
 <body>
-  <div class="top-part">
-    <h1>Tena i Marijan - 7.10.2023., Osijek</h1>
-    <div class="navigation-index">
-      <a class="navigation-link" href="#invitation">Pozivnica</a>
-      <a class="navigation-link" href="#locations">Lokacije</a>
-    </div>
-  </div>
-
-  <div id="invitation" style="animation: coolFadeIn 1s ease 0.5s forwards;">
-    <img class="invitation-image" src="pozivnica.png" alt="Pozivnica za vjenčanje">
-  </div>
-
-  <style>
-    @keyframes coolFadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
-
-  <div id="locations" class="location">
-    <div class="location-item">
-      <p><strong>14:00 Okupljanje kod mlade</strong></p>
-      <p>Fruškogorska 18, Retfala, Osijek</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.510184240593!2d18.6468804!3d45.560178099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7220a2f54a7%3A0x768b0bbf465af9ce!2sFru%C5%A1kogorska%20ul.%2018%2C%2031000%2C%20Osijek!5e0!3m2!1shr!2shr!4v1689981923803!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="login" style="text-align:center; padding-top:20px;">
+        <h2>Molimo unesite vaše ime za pristup:</h2>
+        <input type="text" id="nameInput" placeholder="Tena Miletić">
+        <button onclick="validateLogin()">Prijavi se</button>
     </div>
 
-    <div class="location-item">
-      <p><strong>17:30 Crkva Uzvišenja Svetog Križa</strong></p>
-      <p>Žumberačka ulica 53, Retfala, Osijek</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11173.744687784778!2d18.6486111!3d45.5616667!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7187cef97c5%3A0x4d4301f77c29c3ff!2s%C5%BDupa%20Uzvi%C5%A1enja%20Svetog%20Kri%C5%BEa%2C%20Osijek%206%2C%20Retfala!5e0!3m2!1shr!2shr!4v1689980964202!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="content" style="display:none;">
+      <div class="container">
+        <header>
+            <h1>Sretno Valentinovo, Tena!</h1>
+        </header>
+        <section class="wedding-photo">
+            <img src="wedding-photo.jpg" alt="Naš dan" />
+        </section>
+        <section class="love-note">
+            <p>Moja najdraža Tena,</p>
+            <p>Svaki dan s tobom podsjetnik je koliko sam blagoslovljen što te imam u svom životu. Volim te sve više i više svakim danom. Na ovaj poseban dan, molim svetog Valentina da moli za naš brak, da ga očuva snažnim, punim ljubavi i radosti.</p>
+            <p>Evo nekih biblijskih citata koji me podsjećaju na prekrasnu vezu koju dijelimo:</p>
+            <blockquote>
+                "Ljubav je strpljiva, ljubav je dobrostiva. Ne zavidi, ljubav se ne hvali, ne nadima se." - 1 Korinćanima 13:4
+            </blockquote>
+            <blockquote>
+                "Stoga što Bog združi, čovjek neka ne rastavlja." - Marko 10:9
+            </blockquote>
+            <p>Ove riječi odražavaju dubinu mojih osjećaja prema tebi i svetu putovanju na kojem smo zajedno.</p>
+        </section>
+        <section class="song">
+            <p>Moja pjesma za tebe:</p>
+            <a href="https://www.youtube.com/watch?v=bSVgj4zTQyQ" target="_blank">Poslušaj!</a>
+        </section>
+        <footer>
+            <p>Svom svojom ljubavlju, sada i zauvijek,</p>
+            <p>Tvoj  Marijan</p>
+        </footer>
     </div>
-
-    <div class="location-item">
-      <p><strong>19:30 Zoo Hotel Osijek</strong></p>
-      <p>Sjevernodravska obala 1, Tvrđavica, Osijek</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.0867072977085!2d18.664970175250694!3d45.56869492646203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475ce7b77405829b%3A0x9bfc53bc35b1612b!2sHotel%20Zoo!5e0!3m2!1shr!2shr!4v1689981045305!5m2!1shr!2shr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
-  </div>
-
-  <div class="made-with-love">Made with ❤️ by Marijan, 2023.</div>
 </body>
 </html>
