@@ -15,30 +15,36 @@
 
         <section class="upload-section">
             <p class="intro-text">
-                Dragi gosti, voljeli bismo vidjeti naše vjenčanje iz vaše perspektive!<br>
-                Molimo vas da podijelite slike i videa koja ste snimili tijekom našeg posebnog dana. 😊
+                <i class="fas fa-camera-retro"></i> Dragi gosti, voljeli bismo vidjeti naše vjenčanje iz vaše perspektive!<br>
+                Molimo vas da podijelite slike i videozapise koje ste snimili tijekom našeg posebnog dana. 😊
             </p>
             
             <p class="instructions">
-                **Kako koristiti ovu stranicu:**
+                <strong><i class="fas fa-info-circle"></i> Kako koristiti ovu stranicu:</strong>
                 <ol>
-                    <li>Odaberite sve slike i videozapise koje želite prenijeti klikom na gumb "Odaberite datoteke".</li>
-                    <li>Možete odabrati više datoteka odjednom – samo držite pritisnutu tipku <strong>Ctrl</strong> (na Windowsima) ili <strong>Cmd</strong> (na Macu) dok klikate na datoteke.</li>
-                    <li>Kada ste odabrali datoteke, pritisnite gumb "Pošalji slike i videe" kako biste ih prenijeli.</li>
-                    <li>Pričekajte da se prijenos dovrši – ovisno o broju datoteka, može trajati nekoliko minuta.</li>
+                    <li><i class="fas fa-upload"></i> Odaberite sve slike i videozapise koje želite prenijeti klikom na gumb "Odaberite datoteke".</li>
+                    <li><i class="fas fa-paper-plane"></i> Kada ste odabrali datoteke, pritisnite gumb "Pošalji slike i videe" kako biste ih prenijeli.</li>
+                    <li><i class="fas fa-hourglass-half"></i> Pričekajte da se prijenos dovrši – ovisno o broju datoteka, može trajati nekoliko minuta.</li>
                 </ol>
             </p>
 
             <form id="uploadForm">
-                <label for="fileInput">Prenesite slike i videe:</label>
+                <label for="fileInput"><i class="fas fa-file-upload"></i> Prenesite slike i videe:</label>
                 <input type="file" id="fileInput" name="file" multiple accept="image/*,video/*">
-                <button type="submit">Pošalji slike i videe</button>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Pošalji slike i videe</button>
             </form>
+
+            <div id="feedback" class="feedback" style="display:none;">
+                <p><i class="fas fa-check-circle"></i> Hvala vam! Vaše slike i videi su uspješno preneseni.</p>
+            </div>
         </section>
 
         <footer>
             <p>&copy; 2024 for Ivana & Denis by Marijan with ❤️</p>
         </footer>
+
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="script.js"></script>
     </div>
 </body>
 </html>
