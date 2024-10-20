@@ -1,76 +1,109 @@
 /* style.css */
+
+/* Globalne postavke za cijelu stranicu */
 body {
     font-family: 'Cursive', sans-serif;
-    background-color: #fafafa;
+    background: linear-gradient(to right, #ffe6e6, #fff);
     color: #444;
     text-align: center;
     margin: 0;
     padding: 20px;
 }
 
+/* Glavni stil kontejnera */
 .container {
     max-width: 600px;
     margin: auto;
     padding: 20px;
     background-color: #fff;
     border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
 }
 
+.container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Stil za naslov */
 header h1 {
-    font-size: 2.5em;
-    color: #333;
+    font-size: 2.8em;
+    color: #b56576;
+    margin-bottom: 10px;
+    font-family: 'Lucida Handwriting', sans-serif;
 }
 
-#countdown {
-    font-size: 1.2em;
-    color: #d27a7a;
+header p {
+    color: #777;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+}
+
+/* Sekcija za upload */
+.upload-section {
+    margin-top: 20px;
 }
 
 .upload-section label {
-    display: block;
-    font-size: 1.1em;
+    font-size: 1.2em;
+    color: #b56576;
     margin-bottom: 10px;
-    color: #333;
+    display: block;
 }
 
 input[type="file"] {
-    margin: 10px 0;
+    margin: 10px auto;
+    display: block;
+    font-size: 1em;
 }
 
 button {
-    background-color: #888;
+    background-color: #b56576;
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #a04a63;
 }
 
+/* Stil za footer */
 footer {
-    margin-top: 20px;
+    margin-top: 40px;
     font-size: 0.9em;
     color: #aaa;
 }
 
-/* Animacija srca */
-@keyframes fall {
-    0% { top: -10%; opacity: 1; }
-    100% { top: 110%; opacity: 0; }
+/* Dodatni prijelazi i animacije */
+.container {
+    background: linear-gradient(145deg, #fff, #f3c6d3);
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.heart {
-    position: fixed;
-    top: -10%;
-    left: 50%;
-    font-size: 2rem;
-    color: #ff9999;
-    opacity: 0;
-    animation: fall 5s infinite;
+header h1 {
+    color: #ff6f91;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upload-section label {
+    color: #ff6f91;
+}
+
+button {
+    background: linear-gradient(to right, #ff6f91, #ff9770);
+}
+
+button:hover {
+    background: linear-gradient(to right, #e55571, #ff765e);
+}
+
+footer p {
+    color: #888;
 }
