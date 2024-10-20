@@ -1,111 +1,37 @@
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Valentinovo za Tenu</title>
-<style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #ffe0f0; /* Nježna ružičasta pozadina */
-        background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="60" height="54" viewBox="0 0 60 54"%3E%3Cpath fill="%23ffcccc" fill-opacity="0.4" d="M30 3C15 3 0 21 0 36c0 12 15 18 30 18s30-6 30-18c0-15-15-33-30-33z"%3E%3C/path%3E%3C/svg%3E');
-        /* Srca u pozadini */
-    }
-    .container, #login {
-        max-width: 800px;
-        margin: auto;
-        padding: 20px;
-        background-color: #ffffff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        margin-top: 20px;
-    }
-    header {
-        text-align: center;
-        color: #d63384; /* Romantična roza */
-    }
-    .love-note, .song, footer {
-        margin-top: 20px;
-    }
-    blockquote {
-        font-style: italic;
-        margin: 20px 0;
-        padding: 10px;
-        background-color: #f0f0f0;
-        border-left: 5px solid #d63384;
-    }
-    #login h2, #login input, #login button {
-        font-size: 16px;
-        margin: 10px;
-    }
-    #login button {
-        cursor: pointer;
-        background-color: #d63384;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-    }
-    #login input {
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
-</style>
-<script>
-    function validateLogin() {
-        var nameInput = document.getElementById("nameInput").value;
-        if(nameInput === "Tena Miletić") {
-            document.getElementById("login").style.display = "none";
-            document.getElementById("content").style.display = "block";
-        } else {
-            alert("Molimo unesite točno ime za pristup.");
-        }
-    }
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivana i Denis - Vjenčanje</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <audio autoplay loop>
-    <source src="pjesma.mp3" type="audio/mpeg">
-    Vaš preglednik ne podržava audio element.
-</audio>
-    <div id="login">
-        <h2>Molimo unesite vaše ime za pristup:</h2>
-        <input type="text" id="nameInput" placeholder="Ime Prezime">
-        <button onclick="validateLogin()">Prijavi se</button>
-    </div>
+    <div class="container">
+        <header>
+            <h1>Ivana Šego & Denis Relota</h1>
+            <p>26. listopada 2024.</p>
+            <p id="countdown"></p>
+        </header>
+        
+        <section class="slideshow">
+            <img class="slide" src="slika1.jpg" alt="Ivana i Denis">
+            <img class="slide" src="slika2.jpg" alt="Ivana i Denis">
+            <img class="slide" src="slika3.jpg" alt="Ivana i Denis">
+        </section>
 
-    <div id="content" style="display:none;">
-        <div class="container">
-            <header>
-                <h1>Sretno Valentinovo, Teno!</h1>
-            </header>
-            <section class="wedding-photo">
-                <!-- Zamijenite 'path/to/your/wedding-photo.jpg' stvarnom putanjom ili URL-om do vaše slike -->
-                <img src="wedding-photo.jpg" alt="Naš vjenčani dan" style="max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 10px;">
-            </section>
-            <section class="love-note">
-                <p>Draga moja Teno,</p>
-                <p>Svaki dan s tobom podsjetnik je koliko sam blagoslovljen što te imam u svom životu. Volim te sve više i više svakim danom. Na ovaj poseban dan, molim svetog Valentina da moli za naš brak, da ga očuva snažnim, punim ljubavi i radosti.</p>
-                <blockquote>
-                    "Ljubav je strpljiva, ljubav je dobrostiva. Ne zavidi, ljubav se ne hvali, ne nadima se." - 1 Korinćanima 13:4
-                </blockquote>
-                <blockquote>
-                    "Stoga što Bog združi, čovjek neka ne rastavlja." - Marko 10:9
-                </blockquote>
-                <p>Ove riječi odražavaju dubinu mojih osjećaja prema tebi i putovanju na kojem smo zajedno.</p>
-            </section>
-            <section class="song">
-                <p>Proslavimo našu ljubav pjesmom koja govori našim srcima:</p>
-                <a href="https://www.youtube.com/watch?v=bSVgj4zTQyQ" target="_blank">Poslušaj ovu pjesmu</a>
-            </section>
-            <footer>
-                <p>Svom svojom ljubavlju, sada i zauvijek,</p>
-                <p>Tvoj Marijan ❤️💐</p>
-            </footer>
-        </div>
+        <section class="upload-section">
+            <form id="uploadForm">
+                <label for="fileInput">Prenesite slike i videe:</label>
+                <input type="file" id="fileInput" name="file" multiple accept="image/*,video/*">
+                <button type="submit">Pošalji na Google Drive</button>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 Ivana & Denis</p>
+        </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
