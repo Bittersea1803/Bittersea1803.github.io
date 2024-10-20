@@ -42,7 +42,6 @@ header p {
     padding: 20px;
     border-radius: 10px;
     border: 2px dashed #ff6f91;
-    transition: background-color 0.3s ease;
 }
 
 .upload-section:hover {
@@ -62,6 +61,23 @@ header p {
     margin-bottom: 20px;
 }
 
+.instructions {
+    font-size: 1.1em;
+    color: #555;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.instructions ol {
+    list-style: decimal inside;
+    padding-left: 0;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+/* Stil za dugmad i unos */
 input[type="file"] {
     margin: 10px auto;
     display: block;
