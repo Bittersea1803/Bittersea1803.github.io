@@ -1,50 +1,133 @@
 <!DOCTYPE html>
-<html lang="hr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ivana i Denis - Vjenčanje</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bittersea's Portfolio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            background-color: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+        }
+        h1, h2 {
+            color: #58a6ff;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 10px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .header p {
+            font-size: 1.2em;
+            color: #8b949e;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skills-list li {
+            background-color: #21262d;
+            border: 1px solid #30363d;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .project {
+            background-color: #21262d;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            border-left: 3px solid #58a6ff;
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #c9d1d9;
+        }
+        .links a {
+            color: #58a6ff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-        <header>
-            <h1>Ivana Šego & Denis Relota</h1>
-            <p>26. listopada 2024.</p>
-        </header>
+        <div class="header">
+            <h1>Header</h1>
+            <p>Technology enthusiast with a passion for AI, robotics, and automation.</p>
+        </div>
 
-        <section class="upload-section">
-            <p class="intro-text">
-                <i class="fas fa-camera-retro"></i> Dragi gosti, voljeli bismo vidjeti naše vjenčanje iz vaše perspektive!<br>
-                Molimo vas da podijelite slike i videozapise koje ste snimili tijekom našeg posebnog dana. 😊
+        <div class="section">
+            <h2>About Me</h2>
+            <p>
+                As a developer and engineer, I thrive on solving complex problems and building innovative solutions. 
             </p>
-            
-            <p class="instructions">
-                <strong><i class="fas fa-info-circle"></i> Kako koristiti ovu stranicu:</strong>
-                <ol>
-                    <li><i class="fas fa-upload"></i> Odaberite sve slike i videozapise koje želite prenijeti klikom na gumb "Odaberite datoteke".</li>
-                    <li><i class="fas fa-paper-plane"></i> Kada ste odabrali datoteke, pritisnite gumb "Pošalji slike i videe" kako biste ih prenijeli.</li>
-                    <li><i class="fas fa-hourglass-half"></i> Pričekajte da se prijenos dovrši – ovisno o broju datoteka, može trajati nekoliko minuta.</li>
-                </ol>
-            </p>
+        </div>
 
-            <form id="uploadForm">
-                <label for="fileInput"><i class="fas fa-file-upload"></i> Prenesite slike i videe:</label>
-                <input type="file" id="fileInput" name="file" multiple accept="image/*,video/*">
-                <button type="submit"><i class="fas fa-paper-plane"></i> Pošalji slike i videe</button>
-            </form>
+        <div class="section">
+            <h2>Core Skills</h2>
+            <ul class="skills-list">
+                <li>Python</li>
+                <li>C++</li>
+                <li>Robotics</li>
+                <li>AI & Machine Learning</li>
+                <li>Embedded Systems</li>
+                <li>MATLAB/Simulink</li>
+                <li>Salesforce</li>
+                <li>Data Migration & Automation</li>
+                <li>Git & Version Control</li>
+            </ul>
+        </div>
 
-            <div id="feedback" class="feedback" style="display:none;">
-                <p><i class="fas fa-check-circle"></i> Hvala vam! Vaše slike i videi su uspješno preneseni.</p>
+        <div class="section">
+            <h2>Key Projects & Experience</h2>
+            <div class="project">
+                <h3>Automotive Software & Systems</h3>
+                <p>Contributed to the development of in-house software for managing project requirements and supported various projects related to automotive powertrains.</p>
             </div>
-        </section>
+            <div class="project">
+                <h3>EV Charger Testing Framework</h3>
+                <p>Created a custom testing framework that accelerated the testing process of electric car chargers by 40%, used daily by a team of engineers.</p>
+            </div>
+             <div class="project">
+                <h3>Data Migration Automation</h3>
+                <p>Worked on international projects involving data migration to Salesforce using Python scripts and SFDMU, significantly accelerating the client migration process.</p>
+            </div>
+        </div>
 
-        <footer>
-            <p>&copy; 2024 for Ivana & Denis by Marijan with ❤️</p>
-        </footer>
-
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <script src="script.js"></script>
+        <div class="section links">
+            <h2>Connect</h2>
+            <a href="https://github.com/Bittersea1803" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/marijan-miletic/" target="_blank">LinkedIn</a>
+        </div>
     </div>
+
 </body>
 </html>
